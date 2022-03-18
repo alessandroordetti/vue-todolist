@@ -11,11 +11,52 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
+    <link rel="stylesheet" href="style.css">
 
     <title>Vue ToDo List</title>
 </head>
 <body>
     
+    <main id="app">
+        <div class="container p-5 ">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="New ToDo" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">Aggingi</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 ">
+                    <div class="my-todo-list">
+                        <ul class="my-todo-list">
+                            <li class="py-3 d-flex justify-content-between">
+                                Ciao
+                                <span>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </span>
+                            </li>
+                            <li class="py-3 d-flex justify-content-between">
+                                CIAO
+                                <span>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </span>
+                            </li>
+                        </ul>
+
+                        <h3 class="text-center">
+                            Non ci sono ToDo
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
     <script src="main.js"></script>
 </body>
 </html>

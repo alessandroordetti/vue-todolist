@@ -1,0 +1,15 @@
+body {
+    background-color: darkgrey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.my-todo-list {
+    background-color: aquamarine;
+}
+
+.my-todo-list li {
+    border-bottom: 1px solid white;
+    list-style: none;
+    width: 70%;
+    margin: 0 auto;
+}
