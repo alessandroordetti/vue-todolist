@@ -22,31 +22,28 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="New ToDo" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">Aggingi</button>
+                        <input type="text" class="form-control me-3" placeholder="New ToDo" aria-label="Recipient's username" aria-describedby="basic-addon2" v-model="nuovoContenutoTodo">
+                        
+                        <div class="input-group-append">                       
+                            <button class="btn btn-primary" type="button" @click="aggiungiTodoItem(nuovoContenutoTodo)">
+                                Aggiungi
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 ">
                     <div class="my-todo-list">
-                        <ul class="my-todo-list">
-                            <li class="py-3 d-flex justify-content-between">
-                                Ciao
-                                <span>
-                                    <i class="fa-solid fa-xmark"></i>
-                                </span>
-                            </li>
-                            <li class="py-3 d-flex justify-content-between">
-                                CIAO
-                                <span>
-                                    <i class="fa-solid fa-xmark"></i>
-                                </span>
+                        <ul class="my-todo-list" v-if="todoList.length >= 1">
+                            <li class="py-3 d-flex justify-content-between" v-for="(element, index) in todoList">
+                                
+                                {{element}}
+                                
+                                <span><i @click="rimuoviTodoItem(index)" class="fa-solid fa-xmark"></i></span>
                             </li>
                         </ul>
 
-                        <h3 class="text-center">
+                        <h3 class="text-center" v-else>
                             Non ci sono ToDo
                         </h3>
                     </div>
